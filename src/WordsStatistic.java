@@ -21,7 +21,7 @@ public class WordsStatistic {
         this.numberOfOccurrences = numberOfOccurrences;
     }
 
-    public WordsStatistic getStatistic(String text, char[] delimiters){
+    public WordsStatistic getStatistic(String text, char[] delimiters) {
         for (int i = 0; i < delimiters.length; i++) {
             text = text.replace(delimiters[i], ' ');
         }
@@ -39,9 +39,9 @@ public class WordsStatistic {
 
     @Override
     public String toString() {
-        String result=new String();
-        for(int i=0;i<this.uniqueWords.size();i++){
-            result+=uniqueWords.get(i)+" "+numberOfOccurrences[i]+"\n";
+        String result = new String();
+        for (int i = 0; i < this.uniqueWords.size(); i++) {
+            result += uniqueWords.get(i) + " " + numberOfOccurrences[i] + "\n";
         }
         return result;
     }
